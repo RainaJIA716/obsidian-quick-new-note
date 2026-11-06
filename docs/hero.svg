@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: #2f2a24; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 18px; fill: #8b8177; }
+    .crumb { font-size: 16px; fill: #8b8177; }
+    .crumb-b { font-size: 16px; fill: #2f2a24; }
+    .h1 { font-size: 28px; font-weight: 700; }
+    .line { fill: #e9e3d8; }
+    .item { font-size: 16px; }
+    .item-hi { font-size: 16px; fill: #7a5af8; font-weight: 600; }
+    .note { font-size: 15px; fill: #5c5249; }
+    .small { font-size: 13px; fill: #8b8177; }
+    .note-b { font-size: 15px; font-weight: 600; fill: #7a5af8; }
+    .fm { font-size: 14px; fill: #5c5249; }
+    .icon { fill: none; stroke: #8b8177; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-hi { fill: none; stroke: #7a5af8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .callout { fill: none; stroke: #7a5af8; stroke-width: 1.6; stroke-dasharray: 5 4; }
+    .arrow { fill: none; stroke: #7a5af8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs>
+    <!-- lucide file-plus -->
+    <g id="file-plus">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 15h6"/><path d="M12 18v-6"/>
+    </g>
+    <!-- lucide glasses -->
+    <g id="glasses">
+      <circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/>
+      <path d="M14 15a2 2 0 0 0-2-1 2 2 0 0 0-2 1"/><path d="M2.5 13 5 7c.7-1.3 1.4-2 3-2"/><path d="M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/>
+    </g>
+    <g id="more"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></g>
+    <!-- lucide folder -->
+    <g id="folder"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></g>
+    <!-- lucide folder-open -->
+    <g id="folder-open"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></g>
+    <!-- lucide folder-search -->
+    <g id="folder-search">
+      <path d="M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1"/>
+      <circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/>
+    </g>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#5c4a32" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#FAF8F4"/>
+
+  <text x="60" y="78" class="title">Quick New Note</text>
+  <text x="60" y="110" class="sub">Pick the folder. The note gets that folder's Templater template.</text>
+
+  <!-- ===== Desktop note pane ===== -->
+  <g transform="translate(60,150)">
+    <rect width="720" height="580" rx="14" fill="#fdfcfa" stroke="#e3ddd2" filter="url(#shadow)"/>
+    <path d="M0 14a14 14 0 0 1 14-14h692a14 14 0 0 1 14 14v42H0Z" fill="#f4efe6"/>
+    <line x1="0" y1="56" x2="720" y2="56" stroke="#e3ddd2"/>
+    <text x="26" y="34" class="crumb">←   →</text>
+    <text x="96" y="34" class="crumb">Inbox  /  </text>
+    <text x="172" y="34" class="crumb-b">Reading notes</text>
+
+    <!-- header actions: our button, reading view, more -->
+    <rect x="566" y="12" width="36" height="32" rx="7" fill="#ece5f9"/>
+    <use href="#file-plus" class="icon-hi" transform="translate(572,16)"/>
+    <use href="#glasses" class="icon" transform="translate(620,16)"/>
+    <use href="#more" class="icon" transform="translate(668,16)"/>
+
+    <!-- note body -->
+    <text x="40" y="112" class="h1">Reading notes</text>
+    <rect x="40" y="140" width="290" height="12" rx="6" class="line"/>
+    <rect x="40" y="166" width="250" height="12" rx="6" class="line"/>
+    <rect x="40" y="192" width="280" height="12" rx="6" class="line"/>
+    <rect x="40" y="240" width="220" height="12" rx="6" class="line"/>
+    <rect x="40" y="266" width="270" height="12" rx="6" class="line"/>
+
+    <!-- dropdown menu, right edge aligned with the button -->
+    <g transform="translate(362,52)">
+      <rect width="240" height="236" rx="10" fill="#ffffff" stroke="#e3ddd2" filter="url(#shadow)"/>
+      <use href="#folder-open" class="icon" transform="translate(14,15) scale(0.75)"/>
+      <text x="44" y="30" class="item">Current folder (Inbox)</text>
+      <line x1="10" y1="44" x2="230" y2="44" stroke="#ece6dc"/>
+      <use href="#folder" class="icon" transform="translate(14,55) scale(0.75)"/>
+      <text x="44" y="70" class="item">Projects</text>
+      <rect x="6" y="84" width="228" height="34" rx="6" fill="#f1ecfd"/>
+      <use href="#folder" class="icon-hi" transform="translate(14,91) scale(0.75)"/>
+      <text x="44" y="106" class="item-hi">Meetings</text>
+      <use href="#folder" class="icon" transform="translate(14,127) scale(0.75)"/>
+      <text x="44" y="142" class="item">Reading</text>
+      <use href="#folder" class="icon" transform="translate(14,163) scale(0.75)"/>
+      <text x="44" y="178" class="item">Ideas</text>
+      <line x1="10" y1="196" x2="230" y2="196" stroke="#ece6dc"/>
+      <use href="#folder-search" class="icon" transform="translate(14,203) scale(0.75)"/>
+      <text x="44" y="218" class="item">Other folder…</text>
+    </g>
+
+    <!-- callout above the button -->
+    <path d="M584 -4 C 584 -22, 560 -30, 530 -30" class="callout"/>
+    <text x="392" y="-25" class="note-b">New note in…</text>
+
+    <!-- Templater folder templates -->
+    <g transform="translate(40,330)">
+      <rect width="290" height="214" rx="12" fill="#f8f5ef" stroke="#e3ddd2"/>
+      <text x="18" y="32" class="note-b">Templater → Folder templates</text>
+      <text x="18" y="56" class="small">already set up, nothing to repeat</text>
+      <line x1="18" y1="72" x2="272" y2="72" stroke="#e3ddd2"/>
+      <text x="18" y="100" class="note">Meetings</text>
+      <text x="120" y="100" class="note">→</text>
+      <text x="146" y="100" class="note mono">meeting.md</text>
+      <rect x="10" y="78" width="270" height="32" rx="6" fill="none" stroke="#7a5af8" stroke-width="1.4"/>
+      <text x="18" y="136" class="note">Projects</text>
+      <text x="120" y="136" class="note">→</text>
+      <text x="146" y="136" class="note mono">project.md</text>
+      <text x="18" y="168" class="note">Ideas</text>
+      <text x="120" y="168" class="note">→</text>
+      <text x="146" y="168" class="note mono">idea.md</text>
+      <text x="18" y="198" class="small">no template → blank note</text>
+    </g>
+
+    <!-- arrow -->
+    <path d="M338 437 H 378" class="arrow"/>
+    <path d="M370 429 L 380 437 L 370 445" class="arrow"/>
+
+    <!-- the new note -->
+    <g transform="translate(390,330)">
+      <rect width="290" height="214" rx="12" fill="#ffffff" stroke="#e3ddd2" filter="url(#shadow)"/>
+      <text x="18" y="30" class="small">Meetings  /</text>
+      <rect x="16" y="44" width="104" height="34" rx="4" fill="#d9cffc"/>
+      <text x="20" y="70" style="font-size:24px;font-weight:700">Untitled</text>
+      <text x="132" y="68" class="small">← type the name</text>
+      <line x1="18" y1="94" x2="272" y2="94" stroke="#ece6dc"/>
+      <text x="18" y="120" class="fm mono">type: meeting</text>
+      <text x="18" y="144" class="fm mono">date: 2026-11-06</text>
+      <text x="18" y="168" class="fm mono">attendees:</text>
+      <rect x="18" y="186" width="200" height="10" rx="5" class="line"/>
+    </g>
+  </g>
+
+  <!-- ===== Phone ===== -->
+  <g transform="translate(850,150)">
+    <rect width="290" height="580" rx="36" fill="#2f2a24"/>
+    <rect x="10" y="10" width="270" height="560" rx="28" fill="#fdfcfa"/>
+    <rect x="110" y="20" width="70" height="18" rx="9" fill="#2f2a24"/>
+    <!-- phone header -->
+    <rect x="160" y="54" width="108" height="38" rx="19" fill="#f4efe6"/>
+    <use href="#file-plus" class="icon-hi" transform="translate(172,61)"/>
+    <use href="#glasses" class="icon" transform="translate(204,61)"/>
+    <use href="#more" class="icon" transform="translate(236,61)"/>
+    <text x="30" y="132" style="font-size:20px;font-weight:700">Reading notes</text>
+    <rect x="30" y="150" width="200" height="10" rx="5" class="line"/>
+    <rect x="30" y="170" width="170" height="10" rx="5" class="line"/>
+    <rect x="30" y="190" width="190" height="10" rx="5" class="line"/>
+    <!-- dim + bottom sheet -->
+    <rect x="10" y="10" width="270" height="560" rx="28" fill="#2f2a24" opacity="0.18"/>
+    <path d="M10 286h270v256a28 28 0 0 1-28 28H38a28 28 0 0 1-28-28Z" fill="#f4efe6"/>
+    <rect x="125" y="298" width="40" height="5" rx="2.5" fill="#c9c1b6"/>
+    <rect x="24" y="314" width="242" height="44" rx="14" fill="#ffffff"/>
+    <use href="#folder-open" class="icon" transform="translate(36,327) scale(0.75)"/>
+    <text x="64" y="342" class="item">Current folder</text>
+    <rect x="24" y="368" width="242" height="134" rx="14" fill="#ffffff"/>
+    <use href="#folder" class="icon" transform="translate(36,379) scale(0.75)"/>
+    <text x="64" y="394" class="item">Projects</text>
+    <line x1="36" y1="412" x2="254" y2="412" stroke="#ece6dc"/>
+    <use href="#folder" class="icon-hi" transform="translate(36,423) scale(0.75)"/>
+    <text x="64" y="438" class="item-hi">Meetings</text>
+    <line x1="36" y1="456" x2="254" y2="456" stroke="#ece6dc"/>
+    <use href="#folder" class="icon" transform="translate(36,467) scale(0.75)"/>
+    <text x="64" y="482" class="item">Reading</text>
+    <rect x="24" y="512" width="242" height="44" rx="14" fill="#ffffff"/>
+    <use href="#folder-search" class="icon" transform="translate(36,525) scale(0.75)"/>
+    <text x="64" y="540" class="item">Other folder…</text>
+    <text x="145" y="618" text-anchor="middle" class="note-b">Same button on phones</text>
+  </g>
+</svg>

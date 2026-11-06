@@ -1,0 +1,18 @@
+{
+  "name": "quick-new-note",
+  "version": "0.1.0",
+  "description": "Create a new note in a folder you pick from a header button menu of preset favorite folders, or choose any folder. Applies your Templater folder templates. Note location picker, works on mobile.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.20.0",
+    "obsidian": "latest",
+    "typescript": "^5.4.0"
+  }
+}

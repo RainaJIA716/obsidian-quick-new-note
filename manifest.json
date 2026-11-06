@@ -1,0 +1,9 @@
+{
+  "id": "quick-new-note",
+  "name": "Quick New Note",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.7",
+  "description": "Create a new note in a folder you pick from a header button menu of preset favorite folders, or choose any folder. Applies your Templater folder templates. Note location picker, works on mobile.",
+  "author": "RainaJIA716",
+  "isDesktopOnly": false
+}

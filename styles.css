@@ -1,0 +1,17 @@
+.quick-new-note-row .setting-item-control {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.quick-new-note-row input.quick-new-note-path {
+	flex: 2 1 12em;
+}
+
+.quick-new-note-row input.quick-new-note-alias {
+	flex: 1 1 6em;
+}
+
+
+.quick-new-note-row input.quick-new-note-invalid {
+	border-color: var(--text-error);
+}
